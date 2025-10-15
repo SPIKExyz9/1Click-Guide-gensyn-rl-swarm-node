@@ -95,4 +95,23 @@ or
  screen -r
 ```
 
-# Rerun the node 
+# Do you want to rerun the node?
+
+•**follow step by step**👍
+
+detectory:
+```
+ cd rl-swarm
+```
+Run cmd :
+```
+python3 -m venv .venv
+source .venv/bin/activate
+./run_rl_swarm.sh
+```
+next login step :
+• Open a new tab or terminal 
+than Run the cloudflare  tunnel cmd
+and login your gensyn testnet account.
+
+
