@@ -1,39 +1,73 @@
 #!/usr/bin/env bash
+# ============================================
+# 🧠 GENSYN CPU NODE - 1 CLICK INSTALL SCRIPT
+# ============================================
+
 set -e
 
-echo "🌐 GENSYN CPU NODE INSTALLER (with Cloudflare Tunnel)"
-echo "====================================================="
+echo "🚀 Starting Gensyn CPU Node setup..."
+sleep 2
 
-# 1️⃣ System Update
+# ---- Update system ----
 echo "🛠 Updating packages..."
 sudo apt update && sudo apt upgrade -y
 
-# 2️⃣ Install dependencies
-echo "📦 Installing base dependencies..."
+# ---- Install dependencies ----
+echo "📦 Installing required dependencies..."
 sudo apt install -y curl git wget screen unzip build-essential \
   python3 python3-venv python3-pip lz4 jq pkg-config libssl-dev \
-  tmux htop clang bsdmainutils libleveldb-dev ncdu libgbm1
+  tmux htop clang bsdmainutils libleveldb-dev ncdu libgbm1 \
+  automake autoconf libffi-dev ufw
 
-# 3️⃣ Node.js + Yarn
-echo "⚙️ Installing Node.js & Yarn..."
+# ---- Setup Firewall ----
+echo "🧱 Configuring UFW Firewall..."
+sudo ufw allow 22
+sudo ufw allow 3000/tcp
+sudo ufw --force enable
+sudo ufw status
+
+# ---- Install Node.js + Yarn ----
+echo "📦 Installing Node.js & Yarn..."
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt install -y nodejs
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update && sudo apt install -y yarn
+sudo apt update
+sudo apt install -y yarn
 
-# 4️⃣ Optional swap (16GB)
-if [ ! -f /swapfile ]; then
-  echo "💾 Creating 16GB swap file..."
-  sudo swapoff -a || true
-  sudo dd if=/dev/zero of=/swapfile bs=1M count=16384
-  sudo chmod 600 /swapfile
-  sudo mkswap /swapfile
-  sudo swapon /swapfile
-  echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
-else
-  echo "⚡ Swapfile already exists, skipping..."
-fi
+# ---- Clone Gensyn RL-Swarm ----
+echo "📂 Cloning Gensyn RL-Swarm..."
+cd ~
+rm -rf rl-swarm || true
+git clone https://github.com/gensyn-ai/rl-swarm.git
+cd rl-swarm
+
+# ---- Create Python venv ----
+echo "🐍 Setting up Python virtual environment..."
+python3 -m venv .venv
+source .venv/bin/activate
+
+# ---- Run Node in CPU-Only mode ----
+echo "⚙️ Launching Gensyn CPU Node in screen session..."
+screen -dmS gensyn_cpu bash -c "CUDA_VISIBLE_DEVICES='' CPU_ONLY=1 bash run_rl_swarm.sh"
+
+# ---- Install Cloudflare Tunnel ----
+echo "🌐 Installing Cloudflare Tunnel (cloudflared)..."
+curl -fsSL https://pkg.cloudflare.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloudflare.gpg
+echo "deb [signed-by=/usr/share/keyrings/cloudflare.gpg] https://pkg.cloudflare.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare.list
+sudo apt update
+sudo apt install -y cloudflared
+
+# ---- Start Cloudflare tunnel on port 3000 ----
+echo "☁️ Starting Cloudflare Tunnel..."
+screen -dmS cf_tunnel cloudflared tunnel --url http://localhost:3000
+
+echo ""
+echo "✅ Installation complete!"
+echo "🎯 Run 'screen -r gensyn_cpu' to check node logs."
+echo "🌐 Run 'screen -r cf_tunnel' to see your Cloudflare public URL."
+echo "💾 PEM and identity files will be in ~/rl-swarm/"
+echo ""
 
 # 5️⃣ Clone RL-Swarm repo
 echo "📥 Cloning Gensyn RL-Swarm..."
