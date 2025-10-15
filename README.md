@@ -4,7 +4,7 @@
 
 .🖥️**hardware requirement**.
 
-system ubuntu 24.
+.system ubuntu 24.
 
 •minimum 24 ram
 
