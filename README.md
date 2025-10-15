@@ -36,13 +36,17 @@ pip freeze
 •local PC users:
 http://localhost:3000/ 
 
-📝open in your browser. paste  your mail enter the code click login 
+📝Open this  link in your browser, paste your email enter the code and click login.
 
+📝 Go back to the old tab
 
 •VPS usrs: 
-create a new tab than paste this cmd
+open  a new tab than paste this cmd
 ```
 cloudflared tunnel --url http://localhost:3000
 ```
-📝 open in your browser. paste  your mail enter the code click login
+Then you will see a link like that 👇
+
+
+📝 Open this  link in your browser, paste your email enter the code and click login.
 
