@@ -7,7 +7,7 @@
 
 ```bash
 curl -s https://raw.githubusercontent.com/SPIKExyz9/1Click-Guide-gensyn-rl-swarm-node/main/gensyn_cpu_install.sh | bash
-
+ 
 # next step📝
 
 1• all error solution cmd
