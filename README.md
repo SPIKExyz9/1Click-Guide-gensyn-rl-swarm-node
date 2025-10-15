@@ -30,7 +30,7 @@ screenn -S Gensynai
 ```
 
 
-2️⃣ **paste this error solution cmd***
+2️⃣ **Run and error solution cmd**
 
 ```
 cd rl-swarm
