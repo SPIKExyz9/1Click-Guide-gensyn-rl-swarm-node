@@ -1,4 +1,4 @@
-# gensyn-rl-swarm-node🐝
+# gensyn-RL-Swarm-node🐝
 
 
 •The easiest guide for the Gensyn RL-swarm CPU node🐝 — no coding required, anyone can easily run the node.💎
