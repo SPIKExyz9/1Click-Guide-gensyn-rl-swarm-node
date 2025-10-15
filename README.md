@@ -4,8 +4,11 @@
 
 🖥️**hardware requirement**
 system ubuntu 24.
+
 •minimum 24 ram
+
 •minimum 4core CPU
+
 •minimum 50 gb storage
 
 # install the node 
