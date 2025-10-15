@@ -9,3 +9,22 @@ curl -s https://raw.githubusercontent.com/SPIKExyz9/1Click-Guide-gensyn-rl-swarm
 
 
 # Next step 📝
+1️⃣ open a session 
+
+```
+screen -S Gensynai
+```
+
+
+2️⃣ paste this error solution cmd
+
+```
+cd rl-swarm
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --force-reinstall transformers==4.51.3 trl==0.19.1
+pip freeze
+./run_rl_swarm.sh
+```
+3️⃣ 
+
