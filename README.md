@@ -10,12 +10,13 @@ curl -s https://raw.githubusercontent.com/SPIKExyz9/1Click-Guide-gensyn-rl-swarm
 
 # Next step 📝
 
-**•Run the node following these step** 🏃‍♂️
+**•Run the node by following these steps** 🏃‍♂️
 
 
 1️⃣ **open a sessionn**
 
-```screenn -S Gensynai
+```
+screenn -S Gensynai
 ```
 
 
