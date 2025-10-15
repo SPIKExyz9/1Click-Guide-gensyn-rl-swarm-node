@@ -68,7 +68,17 @@ Then you will see a link like that 👇
 
 •Enter the name of the model you want to use in huggingface repo/name format, or press [Enter] to use the default model. (press Enter and get defalut model). **Simple click enter button**
 
-•Would you like your model to participate in the AI Prediction Market? [Y/n] Enter**Y**
+•Would you like your model to participate in the AI Prediction Market? [Y/n] Enter **Y**
+
+
+**Now your node setup is successfully complete**
+
+📝•You can save the name and peer ID.
+
+If you are running on VPS do this👇 
+
+ctrl a + d
+
 
 
 # Rerun the node 
