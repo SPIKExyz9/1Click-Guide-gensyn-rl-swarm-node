@@ -62,6 +62,8 @@ Then you will see a link like that 👇
 
 📝Go back to the terminal tab and close new cloudflare tab.
 
+
+
 4️⃣ **Final step**
 
 •Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N] **N**
@@ -72,6 +74,8 @@ Then you will see a link like that 👇
 
 
 **congratulations now your node setup is successfully complete**
+
+
 
 5️⃣ **Extra tips**
 
