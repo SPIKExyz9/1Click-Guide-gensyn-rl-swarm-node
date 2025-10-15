@@ -50,3 +50,6 @@ Then you will see a link like that 👇
 
 📝 Open this  link in your browser, paste your email enter the code and click login.
 
+4️⃣ **select model and hugging face token**
+
+# Rerun the node 
