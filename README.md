@@ -31,5 +31,18 @@ pip freeze
 ./run_rl_swarm.sh
 ```
 
-3️⃣ 
+3️⃣**Testnet login**
+
+•local PC users:
+http://localhost:3000/ 
+
+📝open in your browser. paste  your mail enter the code click login 
+
+
+•VPS usrs: 
+create a new tab than paste this cmd
+```
+cloudflared tunnel --url http://localhost:3000
+```
+📝 open in your browser. paste  your mail enter the code click login
 
