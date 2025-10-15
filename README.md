@@ -8,7 +8,7 @@
 
 •minimum 24 ram
 
-•minimum 4core CPU
+•minimum 4 core 
 
 •minimum 50 gb storage
 
@@ -77,12 +77,17 @@ Then you will see a link like that 👇
 
 📝•You can save the name and peer ID.
 
-•If you are running it on an VPS fo👇 
+•If you are running it on an VPS do this👇 
 ctrl a + d
 
 
-• if want to see logs do this 👇
+• If you want to see the logs, do this👇
 
-
+```
+screen -r gensynai
+```
+or
+``` screen -r
+```
 
 # Rerun the node 
