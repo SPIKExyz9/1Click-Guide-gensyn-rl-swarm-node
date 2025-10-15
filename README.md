@@ -71,13 +71,17 @@ Then you will see a link like that 👇
 •Would you like your model to participate in the AI Prediction Market? [Y/n] Enter **Y**
 
 
-**Now your node setup is successfully complete**
+**congratulations now your node setup is successfully complete**
+
+5️⃣ **Extra tips**
 
 📝•You can save the name and peer ID.
 
-If you are running on VPS do this👇 
-
+•If you are running it on an VPS fo👇 
 ctrl a + d
+
+
+• if want to see logs do this 👇
 
 
 
