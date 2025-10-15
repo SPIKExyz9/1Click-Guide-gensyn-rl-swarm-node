@@ -91,7 +91,8 @@ ctrl a + d
 screen -r gensynai
 ```
 or
-``` screen -r
+```
+ screen -r
 ```
 
 # Rerun the node 
