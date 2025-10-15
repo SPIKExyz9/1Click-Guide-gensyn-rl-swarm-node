@@ -64,6 +64,11 @@ Then you will see a link like that 👇
 
 4️⃣ **Final step**
 
+•Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N] **N**
+
+•Enter the name of the model you want to use in huggingface repo/name format, or press [Enter] to use the default model. (press Enter and get defalut model). **Simple click enter button**
+
+•Would you like your model to participate in the AI Prediction Market? [Y/n] Enter**Y**
 
 
 # Rerun the node 
