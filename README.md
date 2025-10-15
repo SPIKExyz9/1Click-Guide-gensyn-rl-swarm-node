@@ -49,7 +49,10 @@ Then you will see a link like that 👇
 
 
 📝 Open this  link in your browser, paste your email enter the code and click login.
+📝Go back to the terminal tab and close new cloudflare tab.
 
-4️⃣ **select model and hugging face token**
+4️⃣ **Final step**
+
+
 
 # Rerun the node 
