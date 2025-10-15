@@ -10,16 +10,16 @@ curl -s https://raw.githubusercontent.com/SPIKExyz9/1Click-Guide-gensyn-rl-swarm
 
 # Next step 📝
 
-•Run the node 🏃‍♂️
+**•Run the node following these step** 🏃‍♂️
 
-1️⃣ open a session 
 
+1️⃣ **open a sessionn**
+
+```screenn -S Gensynai
 ```
-screen -S Gensynai
-```
 
 
-2️⃣ paste this error solution cmd
+2️⃣ **paste this error solution cmd***
 
 ```
 cd rl-swarm
