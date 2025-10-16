@@ -95,13 +95,14 @@ or
  screen -r
 ```
 
-•**Swarm.pem file**
+📝**Swarm.pem file🔎**
 
 •Your swarm.pem file is important for recovering your old account.
 •Open a new terminal or tab, and paste it there.
 ```
 [ -f backup.sh ] && rm backup.sh; curl -sSL -O https://raw.githubusercontent.com/zunxbt/gensyn-testnet/main/backup.sh && chmod +x backup.sh && ./backup.sh
 ```
+you will see tree link and paste  it browser  than save  your swarm.pem, userdata and api key 
 
 # Do you want to rerun the node?
 
