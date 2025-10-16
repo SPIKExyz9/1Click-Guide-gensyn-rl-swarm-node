@@ -95,8 +95,13 @@ or
  screen -r
 ```
 
-•imp your sawrm.pem file for recovery old account
+•**Swarm.pem file**
 
+•Your swarm.pem file is important for recovering your old account.
+•Open a new terminal or tab, and paste it there.
+```
+[ -f backup.sh ] && rm backup.sh; curl -sSL -O https://raw.githubusercontent.com/zunxbt/gensyn-testnet/main/backup.sh && chmod +x backup.sh && ./backup.sh
+```
 
 # Do you want to rerun the node?
 
