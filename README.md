@@ -95,6 +95,9 @@ or
  screen -r
 ```
 
+•imp your sawrm.pem file for recovery old account
+
+
 # Do you want to rerun the node?
 
 •**follow step by step**👍
