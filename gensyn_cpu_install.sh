@@ -11,7 +11,9 @@ sleep 2
 
 # --- Update & Install dependencies ---
 echo "📦 Updating system packages..."
-sudo apt update -y && sudo apt upgrade -y
+# Automatically keep existing configs during upgrade
+sudo DEBIAN_FRONTEND=noninteractive apt update -y
+sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y -o Dpkg::Options::="--force-confold"
 
 echo "📥 Installing dependencies..."
 sudo apt install -y curl git wget screen unzip build-essential \
