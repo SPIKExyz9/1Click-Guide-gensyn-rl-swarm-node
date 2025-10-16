@@ -73,7 +73,7 @@ Then you will see a link like that 👇
 •Would you like your model to participate in the AI Prediction Market? [Y/n] Enter **Y**
 
 
-**congratulations now your node setup is successfully complete**
+🖥️**congratulations now your node setup is successfully complete**🎉
 
 
 
