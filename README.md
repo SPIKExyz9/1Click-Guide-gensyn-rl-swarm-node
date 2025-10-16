@@ -2,7 +2,7 @@
 
 •The easiest guide for the Gensyn RL-swarm CPU node🐝 — no coding required, anyone can easily run the node.💎
 
-.🖥️**hardware requirement**.
+🖥️**hardware requirement**.
 
 .system ubuntu 24.04 LTS
 
