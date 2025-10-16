@@ -6,7 +6,7 @@
 
 .system ubuntu 24.04 LTS
 
-•minimum 24 ram, recommended 32 ram
+•minimum 24 GB ram, recommended 32 GB ram
 
 •minimum 4 core 
 
