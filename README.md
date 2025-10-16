@@ -4,9 +4,9 @@
 
 .🖥️**hardware requirement**.
 
-.system ubuntu 24.
+.system ubuntu 24.04 LTS
 
-•minimum 24 ram
+•minimum 24 ram, recommended 32 ram
 
 •minimum 4 core 
 
