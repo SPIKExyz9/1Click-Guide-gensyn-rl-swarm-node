@@ -59,32 +59,3 @@ cloudflared tunnel --url http://localhost:3000 &
 
 echo ""
 echo "✅ Installation complete!"
-echo "💡 Both Gensyn CPU node and Cloudflare tunnel are running in background."
-# --- Install Cloudflared ---
-echo "☁️ Installing Cloudflared..."
-wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-sudo dpkg -i cloudflared-linux-amd64.deb
-echo "✅ Cloudflared version:"
-cloudflared --version
-
-# --- Clone RL Swarm repo ---
-echo "📂 Downloading Gensyn RL Swarm..."
-cd ~
-if [ -d rl-swarm ]; then rm -rf rl-swarm; fi
-git clone https://github.com/gensyn-ai/rl-swarm.git
-cd rl-swarm
-
-# --- Start in CPU-only mode ---
-echo "🚀 Launching CPU-only node (in background screen)..."
-screen -dmS gensyn_cpu bash -c "
-python3 -m venv .venv && \
-source .venv/bin/activate && \
-CUDA_VISIBLE_DEVICES='' CPU_ONLY=1 bash run_rl_swarm.sh
-"
-
-# --- Start Cloudflare Tunnel ---
-echo "🌐 Starting Cloudflare tunnel for port 3000..."
-screen -dmS cloudflared cloudflared tunnel --url http://localhost:3000
-
-echo ""
-echo "✅ Installation complete!"
