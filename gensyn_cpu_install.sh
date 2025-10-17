@@ -45,7 +45,6 @@ echo "📂 Downloading Gensyn RL Swarm..."
 cd ~
 if [ -d rl-swarm ]; then rm -rf rl-swarm; fi
 git clone https://github.com/gensyn-ai/rl-swarm.git
-cd rl-swarm
 
-echo ""
+echo "
 echo "✅ Installation complete!"
