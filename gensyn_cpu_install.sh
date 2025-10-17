@@ -47,15 +47,5 @@ if [ -d rl-swarm ]; then rm -rf rl-swarm; fi
 git clone https://github.com/gensyn-ai/rl-swarm.git
 cd rl-swarm
 
-# --- Start in CPU-only mode ---
-echo "🚀 Launching CPU-only node..."
-python3 -m venv .venv
-source .venv/bin/activate
-CUDA_VISIBLE_DEVICES='' CPU_ONLY=1 bash run_rl_swarm.sh &
-
-# --- Start Cloudflare Tunnel ---
-echo "🌐 Starting Cloudflare tunnel for port 3000..."
-cloudflared tunnel --url http://localhost:3000 &
-
 echo ""
 echo "✅ Installation complete!"
